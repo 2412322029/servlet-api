@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.api.Isok;
 import com.example.demo.db.User;
 import com.example.demo.db.UserDao;
 import com.example.demo.db.data;
@@ -18,11 +19,14 @@ public class test {
 //        sss.setContent("long long text");
 //        u.insert(sss);
 
-        List<User> a= x.selectalluserId();
-
-        for(User pers : a)
-        {
-            System.out.print(pers.getUserId()+pers.getUsername()+pers.getPassword()+"\n");
-        }
+//        List<User> a= x.selectalluserId();
+//
+//        for(User pers : a)
+//        {
+//            System.out.print(pers.getUserId()+pers.getUsername()+pers.getPassword()+"\n");
+//        }
+//        System.out.println(conf.CODE_ERROR[0]);
+        boolean a = Isok.isStr2Num("1");
+        System.out.println(a);
     }
 }

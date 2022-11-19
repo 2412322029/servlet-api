@@ -1,5 +1,6 @@
 package com.example.demo.db;
 
+import com.example.demo.conf;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -9,8 +10,6 @@ import java.sql.SQLException;
 
 public class DBUtil {
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/servletdb?characterEncoding=utf8&useSSL=false";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "123456";
 
     private static volatile DataSource dataSource = null;
 
@@ -20,8 +19,8 @@ public class DBUtil {
                 if (dataSource == null) {
                     dataSource = new MysqlDataSource();
                     ((MysqlDataSource)dataSource).setUrl(URL);
-                    ((MysqlDataSource)dataSource).setUser(USERNAME);
-                    ((MysqlDataSource)dataSource).setPassword(PASSWORD);
+                    ((MysqlDataSource)dataSource).setUser(conf.USERNAME);
+                    ((MysqlDataSource)dataSource).setPassword(conf.PASSWORD);
                 }
             }
         }

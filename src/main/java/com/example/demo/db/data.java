@@ -14,8 +14,8 @@ public class data {
         return Id;
     }
 
-    public void setdataId(int blogId) {
-        this.Id = blogId;
+    public void setdataId(int Id) {
+        this.Id = Id;
     }
 
     public String getTitle() {
